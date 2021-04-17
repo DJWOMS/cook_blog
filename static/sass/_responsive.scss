@@ -1,0 +1,283 @@
+/*--------------------------------- Responsive Media Quaries -----------------------------*/
+
+@media only screen and (min-width: 1200px) {
+    .container {
+      max-width: 1170px;
+    }
+  }
+  
+  /* Medium Device = 1200px */
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .header__menu ul li {
+          margin-right: 34px;
+      }
+  
+      .single-post__recipe__details__option ul li {
+          margin-right: 8px;
+      }
+  
+      .header__menu ul li:hover .header__megamenu__wrapper {
+          top: 42px;
+          opacity: 1;
+          visibility: visible;
+      }
+
+      .header__megamenu__wrapper {
+          max-width: 950px;
+      }
+
+      .signin {
+        align-items: flex-start;
+      }
+      
+      .footer__instagram__item {
+        height: 180px;
+      }
+  }
+  
+  /* Tablet Device = 768px */
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+  
+      .header__megamenu__wrapper {
+          max-width: 730px;
+      }
+  
+      .header__menu ul li {
+          margin-right: 25px;
+      }
+      
+      .categories__item {
+        height: 330px;
+      }
+
+      .sidebar__item__follow__links a, .humberger__menu__about .humberger__menu__about__social a {
+          margin-bottom: 10px;
+      }
+      
+      .single-post__recipe__details__option ul li {
+          margin-right: 35px;
+      }
+  
+      .single-post__social__item {
+          position: relative;
+          top: 0;
+          left: 0;
+          margin-bottom: 25px;
+      }
+  
+      .single-post__social__item ul li {
+          display: inline-block;
+          margin-right: 6px;
+      }
+  
+      .single-post__more__details img {
+          margin-bottom: 25px;
+      }
+  
+      .about__right__text {
+          padding-top: 30px;
+      }
+      .signin {
+        align-items: flex-start;
+      }
+      .footer__instagram__item {
+        height: 180px;
+      }
+  }
+  
+  /* Wide Mobile = 480px */
+  @media only screen and (max-width: 767px) {
+      .single-post__social__item {
+          position: relative;
+          top: 0;
+          left: 0;
+          margin-bottom: 25px;
+      }
+  
+      .single-post__social__item ul li {
+          display: inline-block;
+          margin-right: 6px;
+      }
+  
+      .single-post__more__details img {
+          margin-bottom: 25px;
+      }
+  
+      .about__right__text {
+          padding-top: 30px;
+      }
+  
+      .contact__form {
+          padding-top: 15px;
+      }
+  
+      .header__menu {
+          display: none;
+      }
+  
+      .header__humberger {
+          text-align: center;
+          padding: 10px 0 5px;
+      }
+  
+      .header__search {
+          padding: 5px 0 11px;
+          text-align: center;
+      }
+  
+      .header__btn,
+      .header__social {
+          display: none;
+      }
+  
+      .header__logo {
+          padding: 30px 0 20px;
+          text-align: center;
+      }
+  
+      .header__social {
+          text-align: center;
+          padding: 0 0 15px;
+      }
+  
+      .sidebar__item {
+          padding-top: 50px;
+      }
+  
+      .categories__list__post__item .categories__post__item__pic {
+          margin-bottom: 30px;
+      }
+  
+      .single-post__recipe__details__option {
+          padding-bottom: 5px;
+      }
+  
+      .single-post__recipe__details__option ul li {
+          margin-bottom: 15px;
+      }
+      
+      .signin__content {
+          width: 450px;
+          text-align: center;
+      }
+  
+      .typography__desc img {
+          margin-bottom: 30px;
+      }
+  
+      .single-post__leave__comment form .input-list {
+          margin-right: 0;
+      }
+  
+      .single-post__leave__comment form .input-list input {
+          width: 100%;
+          margin-right: 0;
+      }
+  
+      .search-model-form input {
+          width: 100%;
+      }
+      .single-post__hero {
+          height: 700px;
+      }
+      .signin {
+        align-items: flex-start;
+      }
+      .footer__instagram__item {
+        height: 180px;
+      }
+  }
+  
+  /* Small Device = 320px */
+  @media only screen and (max-width: 479px) {
+      .humberger__menu__wrapper {
+          width: 300px;
+          padding: 50px 30px 60px 30px;
+      }
+
+      .hero__inside__item--meta {
+          float: none;
+          margin-bottom: 10px;
+      }
+  
+      .sidebar__item__follow__links a, .humberger__menu__about .humberger__menu__about__social a {
+          margin-bottom: 10px;
+      }
+  
+      .load__more__btn a {
+          padding: 12px 80px 10px;
+      }
+  
+      .single-post__title__meta {
+          float: none;
+          margin-right: 0;
+      }
+  
+      .single-post__title__text {
+          overflow: visible;
+          padding-top: 20px;
+      }
+  
+      .single-post__recipe__details__option ul li {
+          float: none;
+          margin-right: 0;
+      }
+  
+      .single-post__tags a {
+          margin-bottom: 10px;
+      }
+  
+      .single-post__previous, .single-post__next {
+          margin-bottom: 30px;
+      }
+  
+      .single-post__author__profile__pic {
+          float: none;
+          margin-right: 0;
+      }
+  
+      .single-post__author__profile__text {
+          overflow: visible;
+          padding-top: 30px;
+      }
+  
+      .single-post__comment__item__text ul {
+          position: relative;
+      }
+  
+      .single-post__comment__item.single-post__comment__item--reply {
+          padding-left: 0;
+      }
+  
+      .signin__content {
+          width: 300px;
+      }
+  
+      .signin__form__text {
+          padding: 30px;
+      }
+  
+      .text-404 form {
+          width: 100%;
+      }
+
+      .single-post__comment__item__pic {
+          float: none;
+          margin-bottom: 15px;
+      }
+
+      .search-model-form {
+          width: 100%;
+      }
+  
+      .search-model-form input {
+          width: 100%;
+          font-size: 18px;
+      }
+
+      .text-404 h1 {
+          font-size: 100px;
+          line-height: 100px;
+      }
+      
+  }

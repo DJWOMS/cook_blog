@@ -1,0 +1,113 @@
+/*---------------------
+  Footer
+-----------------------*/
+.footer {
+    background: #f5f5f5;
+    padding-top: 20px;
+}
+
+.footer__instagram {
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+}
+
+.footer__instagram__item {
+    height: 305px;
+    margin-right: -10px!important;
+    margin-left: -10px!important;
+    margin-bottom: 10px;
+}
+
+.footer__instagram__avatar {
+    display: inline-block;
+    padding: 20px 30px;
+    background: $white-color;
+    position: absolute;
+    height: 90px;
+    width: 240px;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-120px, -50px);
+    transform: translate(-120px, -50px);
+    z-index: 1;
+
+    .footer__instagram__avatar--pic {
+        float: left;
+        margin-right: 15px;
+
+        img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+    }
+
+    .footer__instagram__avatar--text {
+        overflow: hidden;
+
+        h5 {
+            font-size: 20px;
+            color: $heading-color;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        span {
+            font-size: 14px;
+            color: #888888;
+        }
+    }
+}
+
+.footer__text {
+    padding: 50px 0;
+    text-align: center;
+
+    .footer__logo {
+        margin-bottom: 10px;
+
+        a {
+            display: inline-block;
+        }
+    }
+
+    p {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    .footer__social {
+
+        a {
+            display: inline-block;
+            font-size: 16px;
+            color: $heading-color;
+            height: 46px;
+            width: 46px;
+            background: #e7e7e7;
+            border-radius: 50%;
+            line-height: 46px;
+            text-align: center;
+            @include transition(all, .3s);
+            margin-right: 6px;
+    
+            &:last-child {
+                margin-right: 0;
+            }
+    
+            &:hover {
+                background: $primary-color;
+                color: $white-color;
+            }
+        }
+    }
+}
+
+.footer__copyright {
+    font-size: 15px;
+    color: #444444;
+    border-top: 1px solid #e1e1e1;
+    text-align: center;
+    padding: 30px 0 25px;
+}

@@ -1,0 +1,91 @@
+/*---------------------
+    About Section
+-----------------------*/
+.about {
+    padding-bottom: 90px;
+    padding-top: 0;
+}
+
+.about__pic {
+    margin-right: -10px;
+}
+
+.about__pic__item__large {
+    margin-bottom: 10px;
+
+    img {
+        min-width: 100%;
+    }
+}
+
+.about__pic__item {
+    width: calc(50% - 10px);
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    img {
+        min-width: 100%;
+    }
+}
+
+.about__text {
+    border-top: 1px solid #ebebeb;
+    padding-top: 40px;
+}
+
+.about__right__text {
+
+    h2 {
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    ul {
+        margin-left: 20px;
+        margin-bottom: 10px;
+
+        li {
+            list-style: none;
+            font-size: 15px;
+            color: #444444;
+            line-height: 30px;
+            position: relative;
+            padding-left: 20px;
+
+            &:before {
+                position: absolute;
+                left: 0;
+                top: 13px;
+                height: 3px;
+                width: 3px;
+                background: #444444;
+                content: "";
+            }
+        }
+    }
+
+    .about__right__text__social {
+        margin-top: 30px;
+
+        a {
+            display: inline-block;
+            font-size: 14px;
+            color: #444444;
+            background: #ebebeb;
+            height: 46px;
+            width: 46px;
+            margin-right: 6px;
+            line-height: 46px;
+            text-align: center;
+            
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

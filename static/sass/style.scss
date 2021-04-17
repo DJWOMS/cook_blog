@@ -1,0 +1,19 @@
+@import "variable";
+@import "mixins";
+
+@import "base";
+@import "header";
+@import "hero";
+@import "categories";
+@import "sidebar";
+@import "single-post";
+@import "footer";
+@import "about-page";
+@import "contact";
+@import "signin";
+@import "404";
+@import "typography";
+@import "responsive";
+
+
+// sass --watch sass/style.scss:css/style.css

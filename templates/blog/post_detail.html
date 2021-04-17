@@ -1,0 +1,197 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="single-post spad">
+        <div class="single-post__hero set-bg" data-setbg="{{ post.image.url }}"></div>
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="single-post__title">
+                        <div class="single-post__title__meta">
+                            <h2>{{ post.create_at|date:"d" }}</h2>
+                            <span>{{ post.create_at|date:"M" }}</span>
+                        </div>
+                        <div class="single-post__title__text">
+                            <ul class="label">
+                                <li>{{ post.category }}</li>
+                            </ul>
+                            <h4>{{ post.title }}</h4>
+                            <ul class="widget">
+                                <li>by {{ post.author }}</li>
+                                <li>3 min read</li>
+                                <li>20 Comment</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="single-post__social__item">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="single-post__top__text">
+                        <p>{{ post.text|truncatewords:20 }}</p>
+                    </div>
+                    <div class="single-post__recipe__details">
+                        {% for recipe in post.get_recipes %}
+                        <div class="single-post__recipe__details__option">
+                            <ul>
+                                <li>
+                                    <h5><i class="fa fa-user-o"></i> SERVES</h5>
+                                    <span>{{ recipe.serves }}</span>
+                                </li>
+                                <li>
+                                    <h5><i class="fa fa-clock-o"></i> PREP TIME</h5>
+                                    <span>{{ recipe.prep_time }}</span>
+                                </li>
+                                <li>
+                                    <h5><i class="fa fa-clock-o"></i> Cook TIME</h5>
+                                    <span>{{ recipe.cook_time }}</span>
+                                </li>
+                                <li><a href="#" class="primary-btn"><i class="fa fa-print"></i> Read more</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="single-post__recipe__details__indegradients">
+                            <h5>Ingredients</h5>
+                          {{ recipe.ingredients }}
+                        </div>
+                        <div class="single-post__recipe__details__direction">
+                            <h5>Directions</h5>
+                           {{ recipe.directions }}
+                        </div>
+                      {% endfor %}
+                    </div>
+
+                    <div class="single-post__desc">
+                        <p>{{ post.text}}</p>
+                    </div>
+                    <div class="single-post__tags">
+                      {% for tag in post.tags.all %}
+                        <a href="#">{{ tag.name }}</a>
+                      {% endfor %}
+                    </div>
+                    <div class="single-post__next__previous">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <a href="#" class="single-post__previous">
+                                    <h6><span class="arrow_carrot-left"></span> Previous posts</h6>
+                                    <div class="single-post__previous__meta">
+                                        <h4>08</h4>
+                                        <span>Aug</span>
+                                    </div>
+                                    <div class="single-post__previous__text">
+                                        <span>Dinner</span>
+                                        <h5>The Best Weeknight Baked <br />Potatoes, 3 Creative Ways</h5>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <a href="#" class="single-post__next">
+                                    <h6>Next posts <span class="arrow_carrot-right"></span> </h6>
+                                    <div class="single-post__next__meta">
+                                        <h4>05</h4>
+                                        <span>Aug</span>
+                                    </div>
+                                    <div class="single-post__next__text">
+                                        <span>Smoothie</span>
+                                        <h5>The $8 French Rosé I Buy in <br />Bulk Every Summer</h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-post__author__profile">
+                        <div class="single-post__author__profile__pic">
+                            <img src="img/categories/single-post/author-profile.jpg" alt="">
+                        </div>
+                        <div class="single-post__author__profile__text">
+                            <h4>Lena Mollein.</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <div class="single-post__author__profile__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-post__comment">
+                        <div class="widget__title">
+                            <h4>03 Comment</h4>
+                        </div>
+                        <div class="single-post__comment__item">
+                            <div class="single-post__comment__item__pic">
+                                <img src="img/categories/single-post/comment/comment-1.jpg" alt="">
+                            </div>
+                            <div class="single-post__comment__item__text">
+                                <h5>Brandon Kelley</h5>
+                                <span>15 Aug 2017</span>
+                                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                                    adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+                                    magnam.</p>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-share-square-o"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="single-post__comment__item single-post__comment__item--reply">
+                            <div class="single-post__comment__item__pic">
+                                <img src="img/categories/single-post/comment/comment-2.jpg" alt="">
+                            </div>
+                            <div class="single-post__comment__item__text">
+                                <h5>Brandon Kelley</h5>
+                                <span>15 Aug 2017</span>
+                                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                                    adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+                                    magnam.</p>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-share-square-o"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="single-post__comment__item">
+                            <div class="single-post__comment__item__pic">
+                                <img src="img/categories/single-post/comment/comment-3.jpg" alt="">
+                            </div>
+                            <div class="single-post__comment__item__text">
+                                <h5>Brandon Kelley</h5>
+                                <span>15 Aug 2017</span>
+                                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                                    adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+                                    magnam.</p>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-share-square-o"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-post__leave__comment">
+                        <div class="widget__title">
+                            <h4>Leave a comment</h4>
+                        </div>
+                        <form action="#">
+                            <div class="input-list">
+                                <input type="text" placeholder="Name">
+                                <input type="text" placeholder="Email">
+                                <input type="text" placeholder="Website">
+                            </div>
+                            <textarea placeholder="Message"></textarea>
+                            <button type="submit" class="site-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}
+

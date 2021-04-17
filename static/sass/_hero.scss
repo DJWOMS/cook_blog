@@ -1,0 +1,218 @@
+/*---------------------
+  Hero
+-----------------------*/
+.hero__inside__item {
+    position: relative;
+    height: 633px;
+    margin-bottom: 11px;
+    margin-right: 11px;
+}
+
+.hero__slider {
+    overflow: hidden;
+
+    &.owl-carousel {
+
+        .owl-nav {
+
+            button {
+                height: 50px;
+                width: 50px;
+                background: rgba(0, 0, 0, 0.3);
+                line-height: 54px;
+                text-align: center;
+                font-size: 30px;
+                color: $white-color;
+                position: absolute;
+                left: 30px;
+                top: 50%;
+                -webkit-transform: translateY(-25px);
+                transform: translateY(-25px);
+
+                &.owl-next {
+                    left: auto;
+                    right: 30px;
+                }
+            }
+        }
+    }
+}
+
+.hero__item {
+    margin-right: -11px;
+}
+
+.hero__inside__item--wide {
+
+    .hero__inside__item--meta {
+        height: 110px;
+        width: 110px;
+        padding-top: 27px;
+        margin-right: 30px;
+    
+        span {
+            font-size: 42px;
+            line-height: 24px;
+        }
+    
+        p {
+            font-size: 24px;
+            line-height: 24px;
+        }
+    }
+
+    .hero__inside__item--text {
+        overflow: hidden;
+    
+        .label {
+            margin-bottom: 5px;
+    
+            li {
+                list-style: none;
+                display: inline-block;
+                margin-right: 18px;
+                color: $primary-color;
+                font-size: 12px;
+                text-transform: uppercase;
+                position: relative;
+    
+                &:last-child {
+                    margin-right: 0;
+    
+                    &:after {
+                        display: none;
+                    }
+                }
+    
+                &:after {
+                    position: absolute;
+                    right: -14px;
+                    top: -2px;            
+                    content: "|";
+                    color: $white-color;
+                    opacity: .3;
+                }
+            }
+        }
+    
+        h4 {
+            font-size: 26px;
+            color: $white-color;
+            line-height: 34px;
+        }
+    
+        .widget {
+    
+            li {
+                list-style: none;
+                display: inline-block;
+                margin-right: 25px;
+                font-size: 12px;
+                color: #c4c4c4;
+                position: relative;
+    
+                span {
+                    color: $white-color;
+                }
+    
+                &:after {
+                    position: absolute;
+                    right: -18px;
+                    top: -1px;
+                    content: "|";
+                    color: $white-color;
+                    opacity: .3;
+                }
+    
+                &:last-child {
+                    margin-right: 0;
+
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hero__inside__item--small {
+    height: 311px;
+}
+
+.hero__inside__item__text {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
+    padding: 0 30px;
+}
+
+.hero__inside__item--meta {
+    background: rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    height: 65px;
+    width: 65px;
+    text-align: center;
+    padding-top: 14px;
+    float: left;
+    margin-right: 20px;
+
+    span {
+        font-size: 26px;
+        color: $white-color;
+        font-weight: 900;
+        line-height: 18px;
+    }
+
+    p {
+        font-size: 12px;
+        color: $white-color;
+        font-weight: 600;
+        text-transform: uppercase;
+        opacity: .5;
+        margin-bottom: 0;
+        line-height: 15px;
+    }
+}
+
+.hero__inside__item--text {
+    overflow: hidden;
+
+    .label {
+        margin-bottom: 5px;
+
+        li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 18px;
+            color: $primary-color;
+            font-size: 12px;
+            text-transform: uppercase;
+            position: relative;
+
+            &:last-child {
+                margin-right: 0;
+
+                &:after {
+                    display: none;
+                }
+            }
+
+            &:after {
+                position: absolute;
+                right: -14px;
+                top: -2px;            
+                content: "|";
+                color: $white-color;
+                opacity: .3;
+            }
+        }
+    }
+
+    h5 {
+        font-size: 20px;
+        color: $white-color;
+        line-height: 26px;
+    }
+}

@@ -1,0 +1,136 @@
+/*---------------------
+  Typography
+-----------------------*/
+.typography {
+    padding-top: 0;
+}
+
+.typography__text {
+    border-top: 1px solid #ebebeb;
+    padding-top: 50px;
+
+    p {
+        font-size: 15px;
+    }
+}
+
+.typography__top__text {
+    margin-bottom: 25px;
+
+    p {
+
+    }
+
+    h3 {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+}
+
+.typography__desc {
+    margin-bottom: 30px;
+
+    img {
+        min-width: 100%;
+    }
+
+    p {
+        margin-bottom: 10px;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        margin-bottom: 12px;
+    }
+
+    h4 {
+        margin-bottom: 18px;
+    }
+
+    .large-h5 {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+    
+    h5 {
+        margin-bottom: 20px;
+    }
+
+    h6 {
+        margin-bottom: 18px;
+    }
+}
+
+.typography__last__text {
+    margin-bottom: 35px;
+}
+
+.typography__text__list {
+
+    p {
+        margin-bottom: 8px;
+    }
+
+    h3 {
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+
+    ul {
+        margin-bottom: 8px;
+        padding-left: 30px;
+
+        li {
+            list-style: none;
+            font-size: 15px;
+            color: #444444;
+            line-height: 30px;
+            position: relative;
+            padding-left: 24px;
+
+            &.p-left {
+                margin-left: 30px;
+            }
+
+            &:before {
+                position: absolute;
+                left: 0;
+                top: 13px;
+                height: 3px;
+                width: 3px;
+                background: $heading-color;
+                content: "";
+            }
+        }
+    }
+}
+
+.typography__text__list--unorder {
+    margin-bottom: 30px;
+}
+
+.typography__text__list--order {
+
+    ul {
+
+        li {
+
+            span {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
