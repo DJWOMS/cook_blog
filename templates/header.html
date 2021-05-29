@@ -1,0 +1,44 @@
+{% load social_tags %}
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-md-1 col-6 order-md-1 order-1">
+          <div class="header__humberger">
+            <i class="fa fa-bars humberger__open"></i>
+          </div>
+        </div>
+        <div class="col-lg-8 col-md-10 order-md-2 order-3">
+          {% include 'blog/include/top_nav.html' %}
+        </div>
+        <div class="col-lg-2 col-md-1 col-6 order-md-3 order-2">
+          <div class="header__search">
+            <i class="fa fa-search search-switch"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3">
+        <div class="header__btn">
+          <a href="./signin.html" class="primary-btn">Subscribe</a>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="header__logo">
+          <a href="./index.html"><img src="img/logo.png" alt=""></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3">
+        <div class="header__social">
+          {% get_social_links as social_links %}
+          {% for item in social_links %}
+            <a href="{{ item.link }}"><img class="contact_icon" src="{{ item.icon.url }}"></a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

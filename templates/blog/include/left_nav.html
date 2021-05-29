@@ -1,4 +1,4 @@
-{% load menu_tags %}
+{% load menu_tags social_tags %}
 
 <div class="humberger__menu__overlay"></div>
 <div class="humberger__menu__wrapper">
@@ -9,28 +9,27 @@
     <ul>
       <li><a href="/">Главная</a></li>
       {% get_categories %}
-      <li><a href="./about.html">О нас</a></li>
-      <li><a href="./contact.html">Контакты</a></li>
+      <li><a href="{% url 'about' %}">О нас</a></li>
+      <li><a href="{% url 'contact' %}">Контакты</a></li>
     </ul>
   </nav>
   <div id="mobile-menu-wrap"></div>
+
   <div class="humberger__menu__about">
     <div class="humberger__menu__title sidebar__item__title">
       <h6>About me</h6>
     </div>
-    <img src="img/humberger/humberger-about.jpg" alt="">
-    <h6>Hi every one! I,m Lena Mollein.</h6>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-      labore et
-      dolore magna aliqua.</p>
+    {% get_about as about %}
+    <img src="{{ about.get_first_image}}" alt="">
+    {{ about.mini_text|safe }}
     <div class="humberger__menu__about__social sidebar__item__follow__links">
-      <a href="#"><i class="fa fa-facebook"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
-      <a href="#"><i class="fa fa-youtube-play"></i></a>
-      <a href="#"><i class="fa fa-instagram"></i></a>
-      <a href="#"><i class="fa fa-envelope-o"></i></a>
+      {% get_social_links as social_links %}
+      {% for item in social_links %}
+        <a href="{{ item.link }}"><img class="contact_icon" src="{{ item.icon.url }}"></a>
+      {% endfor %}
     </div>
   </div>
+
   <div class="humberger__menu__subscribe">
     <div class="humberger__menu__title sidebar__item__title">
       <h6>Subscribe</h6>
