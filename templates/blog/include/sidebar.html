@@ -1,0 +1,52 @@
+{% load social_tags %}
+
+<div class="col-lg-4 col-md-4">
+  <div class="sidebar__item">
+    <div class="sidebar__about__item">
+      <div class="sidebar__item__title">
+        <h6>About me</h6>
+      </div>
+      {% get_about as about %}
+      <img src="{{ about.get_first_image }}" alt="">
+      <h6>Hi every one! I,m <span>{{ about.name }}</span></h6>
+      <p>{{ about.mini_text|safe }}</p>
+      <a href="{% url 'about' %}" class="primary-btn">Read more</a>
+    </div>
+    <div class="sidebar__follow__item">
+      <div class="sidebar__item__title">
+        <h6>Follow me</h6>
+      </div>
+      {% get_social_links as social_links %}
+      <div class="sidebar__item__follow__links">
+        {% for item in social_links %}
+          <a href="{{ item.link }}"><img src="{{ item.icon.url }}"></a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="sidebar__item__banner">
+      <img src="/static/img/sidebar/banner.jpg" alt="">
+    </div>
+    <div class="sidebar__item__categories">
+      <div class="sidebar__item__title">
+        <h6>Categories</h6>
+      </div>
+    {% include './sidebar_category.html' %}
+
+    </div>
+    <div class="sidebar__subscribe__item">
+      <div class="sidebar__item__title">
+        <h6>Subscribe</h6>
+      </div>
+      <p>Subscribe to our newsletter and get our newest updates right on your inbox.</p>
+      <form action="#">
+        <input type="text" class="email-input" placeholder="Your email">
+        <label for="s-agree-check">
+          I agree to the terms & conditions
+          <input type="checkbox" id="s-agree-check">
+          <span class="checkmark"></span>
+        </label>
+        <button type="submit" class="site-btn">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</div>
