@@ -1,5 +1,6 @@
-{% load menu_tags %}
+{% load menu_tags cache %}
 
+{% cache 5000 top_nav %}
 <nav class="header__menu">
   <ul>
     <li class="active"><a href="/">Главная</a></li>
@@ -9,3 +10,4 @@
     <li><a href="{% url 'contact' %}">Контакты</a></li>
   </ul>
 </nav>
+{% endcache %}

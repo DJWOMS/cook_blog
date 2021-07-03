@@ -1,4 +1,6 @@
-{% load social_tags %}
+{% load social_tags cache %}
+
+{% cache 5000 header %}
 <header class="header">
   <div class="header__top">
     <div class="container">
@@ -19,23 +21,24 @@
       </div>
     </div>
   </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3 col-md-3">
-      </div>
-      <div class="col-lg-6 col-md-6">
-        <div class="header__logo">
-          <a href="./index.html"><img src="img/logo.png" alt=""></a>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-3">
-        <div class="header__social">
-          {% get_social_links as social_links %}
-          {% for item in social_links %}
-            <a href="{{ item.link }}"><img class="contact_icon" src="{{ item.icon.url }}"></a>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </div>
+{#  <div class="container">#}
+{#    <div class="row">#}
+{#      <div class="col-lg-3 col-md-3">#}
+{#      </div>#}
+{#      <div class="col-lg-6 col-md-6">#}
+{#        <div class="header__logo">#}
+{#          <a href="./index.html"><img src="img/logo.png" alt=""></a>#}
+{#        </div>#}
+{#      </div>#}
+{#      <div class="col-lg-3 col-md-3">#}
+{#        <div class="header__social">#}
+{#          {% get_social_links as social_links %}#}
+{#          {% for item in social_links %}#}
+{#            <a href="{{ item.link }}"><img class="contact_icon" src="{{ item.icon.url }}"></a>#}
+{#          {% endfor %}#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
 </header>
+{% endcache %}

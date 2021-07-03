@@ -1,0 +1,18 @@
+<section class="hero">
+  <div class="hero__slider owl-carousel">
+    <div class="hero__item">
+      <div class="container-fluid">
+        <div class="row">
+          {% for photo in photos %}
+            <div class="col-lg-6 p-0">
+                <div class="hero__inside__item hero__inside__item--wide set-bg"
+                     data-setbg="{{ photo.image.url }}">
+                </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Hero Section End -->

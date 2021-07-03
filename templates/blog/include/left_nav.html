@@ -1,5 +1,6 @@
-{% load menu_tags social_tags %}
+{% load menu_tags social_tags cache %}
 
+{% cache 5000 left_nav %}
 <div class="humberger__menu__overlay"></div>
 <div class="humberger__menu__wrapper">
   <div class="humberger__menu__logo">
@@ -46,3 +47,4 @@
     </form>
   </div>
 </div>
+{% endcache %}
