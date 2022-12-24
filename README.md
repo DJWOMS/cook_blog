@@ -39,7 +39,7 @@ Linux
     
 Windows
 
-    source venv/bin/activate
+    ./venv/Scripts/activate
 
 ##### 5) Устанавливить зависимости:
 
