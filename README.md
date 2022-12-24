@@ -57,6 +57,12 @@ Windows
 
     python manage.py runserver
 
+##### 10) Ссылки
+
+- Сайт http://127.0.0.1:8000/
+
+- Админ панель http://127.0.0.1:8000/admin
+
 ## License
 
 [BSD 3-Clause License](https://opensource.org/licenses/BSD-3-Clause)
