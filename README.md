@@ -31,6 +31,16 @@
     
 ##### 4) Активировать виртуальное окружение
 
+    cd cook_blog
+    
+Linux
+
+    source venv/bin/activate
+    
+Windows
+
+    source venv/bin/activate
+
 ##### 5) Устанавливить зависимости:
 
     pip install -r req.txt
