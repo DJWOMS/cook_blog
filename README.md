@@ -2,8 +2,8 @@
 
 
 **Ссылки**:
-- [Telegram](https://t.me/trueDjangoChannel)
-- [Сайт](https://djangochannel.com)
+- [Telegram чат](https://t.me/trueDjangoChannel)
+- [Telegram канал](https://t.me/django_school)
 - [YouTube](https://www.youtube.com/channel/UC_hPYclmFCIENpMUHpPY8FQ?view_as=subscriber)
 
 ### Описание проекта:
@@ -14,7 +14,7 @@
 
 **Стек:**
 - Python >= 3.9
-- Django >= 3
+- Django == 3.2.4
 - sqlite3
 
 ## Разработка
